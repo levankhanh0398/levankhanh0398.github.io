@@ -1,0 +1,94 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#wrapper {
+  background-color: #333;
+  color: #333;
+  font-family: 'Raleway', sans-serif;
+  font-weight:400;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.9;
+  position: relative;
+}
+
+#quote-box, #quote-box-none {
+  border-radius: 3px;
+  width: 450px;
+  padding: 40px 50px;
+  background-color: #fff;
+  box-shadow: 0 2rem 4rem #0a0a0c;
+  opacity: 0.9;
+  transition: transform 3s;
+}
+
+#quote-box-none {
+  position: absolute;
+  background: blue;
+  left: -5000px;
+}
+
+.text, .text-none {
+  text-align: center;
+  font-weight: 500;
+  line-height: 40px;
+  font-size: 30px;
+}
+
+.author, .author-none {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.button, .button-none {
+  margin-top: 30px;
+  height: auto;
+}
+
+#new-quote, #new-quote-none {
+  float: right;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  height: 40px;
+  width: 100px;
+  color: white;
+  background: black;
+  transition: transform 0.5s;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#tweet-quote, #facebook-quote, #tweet-quote-none, #facebook-quote-none{
+  float: left;
+  text-decoration: none;
+  color: white;
+  background: black;
+  border-radius: 3px;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2em;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.5s;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#new-quote:hover {
+  opacity:0.8;
+  transform: scale3d(1.1,1.1,1);
+}
+
+#tweet-quote:hover, #facebook-quote:hover {
+  opacity: 0.8;
+  transform: scale3d(1.1,1.1,1);
+}
