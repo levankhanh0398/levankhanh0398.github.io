@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Baskervville&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Orbitron&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+#container {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0,0,0,0.9);
+}
+
+#title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Monoton', cursive;
+  height: 10vh;
+  width: 100%;
+  color: white;
+  background: rgba(0, 0, 0, 1);
+}
+
+#wrap {
+  height: 84vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: width 0.5s, height 0.5s;
+}
+
+.editor, #preview{
+  width: 50%;
+  height: 84vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: width 0.5s, height 0.5s, right 0.5s, left 0.5s;
+  position: absolute;
+}
+
+.editor {
+  float: left;
+}
+
+#preview { 
+  float: right;
+  right: 0;
+}
+
+#editor, #display {
+  width: 90%;
+  height: 90%;
+  border: 3px solid #444857;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#display {
+  overflow-y: scroll;
+  background: white;
+}
+
+#display * {
+ margin: 0.5em;
+}
+
+#editor {
+  background: rgba(0,0,0,0);
+  color: rgb(232, 198, 113);
+  outline: none;
+}
+
+.tool-bar {
+  width: 90%;
+  border-top: 3px solid #444857;
+  border-left: 3px solid #444857;
+  border-right: 3px solid #444857;
+  position: relative;
+  background: rgba(0, 0, 0, 1);
+  color: #aaaebc;;
+  padding: 10px;
+  margin-top: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.btn {
+  position: absolute;
+  right: 10px;
+  background: #aaaebc;
+  padding: 2px;
+  border-color: #aaaebc;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: white;
+}
+
+textarea {
+  font-family: 'roboto', cursive;
+}
+
+textarea::selection {
+  background: #aaaebc;
+}
+
+#setting-editor {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.5);;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+#setting-close {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: 200;
+}
+
+#setting {
+  z-index: 300;
+  width: 50%;
+  height: 80%;
+  background: #ececec;;
+  border: 3px solid #fff;
+  border-radius: 40px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#setting > #edit {
+  margin: 30px;
+  position: relative;
+  height: 80%;
+}
+
+#setting > #edit > button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+#setting > #edit > .atb {
+  margin-bottom: 15px;
+  
+}
+
+#setting > #edit > textarea {
+  width: 100%;
+  font-size: 20px;
+  height: 50%;
+}
+
+#setting > #edit > button {
+  color: #fff;
+  background: #49c749;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#share {
+  
+}
+
+#footer {
+  height: 6vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 1);
+  clear: both;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  transition: bottom 0.5s;
+}
+
+#btn-share {
+  padding: 3px;
+}
+
+#btn-setting {
+  background: #aaaebc;
+  padding: 1px 3px;
+  border-radius: 3px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-color: #aaaebc;
+}
+
+#btn-setting:hover {
+  background: white;
+}
+
+/* Markdown Previewer */
+blockquote {
+  border-left: 3px solid #224B4B;
+  color: #224B4B;
+  padding-left: 5px;
+  margin-left: 25px;
+}
+
+code {
+  background: #ded4d4;
+  padding: 1px 4px 2px 4px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+pre {
+  background: #ded4d4;
+  padding: 5px 0 5px 5px;
+}
+
+#display h1 {
+  border-bottom: 2px solid black;
+}
+
+#display h2 {
+  border-bottom: 1px solid black;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 2px solid black;
+  padding-left: 5px;
+  padding-right: 5px;
+}
